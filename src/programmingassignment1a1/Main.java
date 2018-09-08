@@ -7,7 +7,7 @@ package programmingassignment1a1;
 
 /**
  *
- * @author enter
+ * @author Andres
  */
 public class Main {
 
@@ -15,7 +15,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
     }
     
 }
