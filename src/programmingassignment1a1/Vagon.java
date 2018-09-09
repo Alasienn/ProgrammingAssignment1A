@@ -16,10 +16,18 @@ public class Vagon {
     private int cupos;
     private ArrayList<Reserva> reserva;
 
-    public Vagon(int num, int cupos, ArrayList<Reserva> reserva) {
+    public Vagon(int num, int cupos) {
         this.num = num;
         this.cupos = cupos;
         this.reserva = new ArrayList<>();
+    }
+    
+    public int cuporeserva(){
+        int i = 0;
+        for (Reserva r : this.reserva) {
+            i = reserva.size();
+        }
+        return i;
     }
 
     public int getNum() {
@@ -52,8 +60,8 @@ public class Vagon {
 
     @Override
     public String toString() {
-        String imprime= "WAGON " + num + " Occupied: " + reserva.size() + " Available: " + (cupos-reserva.size())+ reserva.toString();
-        return imprime;
+        String id =""+num;
+        return id;
     }
     
     

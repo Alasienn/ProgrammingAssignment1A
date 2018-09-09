@@ -12,12 +12,27 @@ import java.util.ArrayList;
  * @author Andres
  */
 public class Reserva {
+
     private String id;
     private ArrayList<Cliente> cliente;
+    private int tamano;
 
     public Reserva(String id, ArrayList<Cliente> cliente) {
         this.id = id;
         this.cliente = new ArrayList<>();
+        this.tamano =0;
+    }
+
+    public int getTamano() {
+        return tamano;
+    }
+
+    public void setTamano() {
+        int i = 0;
+        for (Cliente c : this.cliente) {
+            i = cliente.size();
+        }
+        this.tamano = i;
     }
 
     public String getId() {
@@ -35,13 +50,13 @@ public class Reserva {
     public void setCliente(ArrayList<Cliente> cliente) {
         this.cliente = cliente;
     }
-    
-    public boolean newCliente(int id, String name){
-        Cliente c = new Cliente(id,name);
+
+    public boolean newCliente(int id, String name) {
+        Cliente c = new Cliente(id, name);
         return this.cliente.add(c);
     }
-    
-    public boolean newCliente2(Cliente z){
+
+    public boolean newCliente2(Cliente z) {
         return this.cliente.add(z);
     }
 
@@ -51,7 +66,6 @@ public class Reserva {
         for (Cliente c : this.cliente) {
             i += c.toString();
         }
-        //String aux = "[" + id + "]";
         return i;
     }
 
