@@ -12,19 +12,19 @@ import java.util.ArrayList;
  * @author Andres
  */
 public class Reserva {
-    private char id;
+    private String id;
     private ArrayList<Cliente> cliente;
 
-    public Reserva(char id, ArrayList<Cliente> cliente) {
+    public Reserva(String id, ArrayList<Cliente> cliente) {
         this.id = id;
         this.cliente = new ArrayList<>();
     }
 
-    public char getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(char id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -36,5 +36,23 @@ public class Reserva {
         this.cliente = cliente;
     }
     
+    public boolean newCliente(int id, String name){
+        Cliente c = new Cliente(id,name);
+        return this.cliente.add(c);
+    }
     
+    public boolean newCliente2(Cliente z){
+        return this.cliente.add(z);
+    }
+
+    @Override
+    public String toString() {
+        String i = "";
+        for (Cliente c : this.cliente) {
+            i += c.toString();
+        }
+        //String aux = "[" + id + "]";
+        return i;
+    }
+
 }
