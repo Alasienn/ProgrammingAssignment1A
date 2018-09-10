@@ -5,6 +5,10 @@
  */
 package programmingassignment1a1;
 
+import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +21,7 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         //Clientes
         Cliente cli = new Cliente(12345, "Pepe");
         Cliente cli2 = new Cliente(12346, "Pepito2");
@@ -37,14 +41,12 @@ public class Main {
         pru2.newCliente2(cli);
 
         //Vagon
-        Vagon prueba = new Vagon(1,10);
-        Vagon prueba2 = new Vagon(2,10);
+        Vagon prueba = new Vagon(1, 10);
+        Vagon prueba2 = new Vagon(2, 10);
 
         ///RECORRIDOS
         Recorridos rec = new Recorridos("25/3/2014", null, null);
-        
-        
-        
+
         rec.nuevaReserva(pru);
         rec.nuevaReserva(pru2);
         //Vagones en Rec
@@ -55,22 +57,53 @@ public class Main {
         pru2.setTamano();
         //Cupos en Vagones
         rec.setCupos(prueba.getCupos());
-        if(pru.getTamano()>=prueba.getCupos()){
+        if (pru.getTamano() >= prueba.getCupos()) {
             rec.setOcupados(pru.getTamano());
-        }else{
+        } else {
             rec.setOcupados(pru2.getTamano());
         }
 
         rec.setCupos(prueba2.getCupos());
         rec.setOcupados(pru2.getTamano());
-        
+
         //FINAL
         Gestion sabana = new Gestion(null);
         sabana.newRecor(rec);
         //System.out.println(sabana.toString());
         System.out.println(sabana.toString());
-       }
+
+        CreacionArchivo f = new CreacionArchivo();
+        File fl = f.crearArchivo();
+        f.rellArchivo(sabana, fl);
     }
 
+    public static class CreacionArchivo {
 
+        public File crearArchivo() {
+            File f = new File("salida.txt");
+            if (!(f.exists())) {
+                try {
+                    f.createNewFile();
+                    System.out.println("getAbsolutePath returns " + f.getAbsolutePath());
+                } catch (IOException ex) {
+                    System.out.println("No se pudo crear el archivo.");
+                }
+            }
+            return f;
+        }
 
+        public static void rellArchivo(Gestion g, File fl) throws FileNotFoundException {
+            ArrayList<String> z = new ArrayList<>();
+            String r = null;
+            for (Recorridos re : g.getRecor()) {
+                r = "" + g.toString();
+                z.add(r);
+            }
+
+            PrintStream ps = new PrintStream(fl);
+            for (String lt : z) {
+                ps.println(lt);
+            }
+        }
+    }
+}

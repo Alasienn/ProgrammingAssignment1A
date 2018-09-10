@@ -1,0 +1,8 @@
+[Ride Status
+DATE: 25/3/2014
+WAGON [1, 2]. Occupied: 2 Available: 8
+Bookings = [A1, A2]
+WAGON [1, 2]. Occupied: 2 Available: 8
+Bookings = [A1, A2]
+] 
+
