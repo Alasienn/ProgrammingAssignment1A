@@ -55,7 +55,11 @@ public class Main {
         pru2.setTamano();
         //Cupos en Vagones
         rec.setCupos(prueba.getCupos());
-        rec.setOcupados(pru.getTamano());
+        if(pru.getTamano()>=prueba.getCupos()){
+            rec.setOcupados(pru.getTamano());
+        }else{
+            rec.setOcupados(pru2.getTamano());
+        }
 
         rec.setCupos(prueba2.getCupos());
         rec.setOcupados(pru2.getTamano());

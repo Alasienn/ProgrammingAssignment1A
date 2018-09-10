@@ -31,8 +31,11 @@ public class Recorridos {
         return ocupados;
     }
 
+    //verfica que no se salga del limite de asientos
     public void setOcupados(int ocupados) {
+        if(ocupados<getCupos()){
         this.ocupados = ocupados;
+        setCupos(getCupos()-ocupados);}
     }
 
     public int getCupos() {
@@ -80,7 +83,7 @@ public class Recorridos {
         String imprime ="";
         imprime += "Ride Status" + "\n" + "DATE: " + fecha + "\n";
         for (Vagon r : this.wagons) {
-        imprime +="WAGON " + wagons.toString() + ". Occupied: " + ocupados + " Available: " + (this.cupos - ocupados) + "\n" + "Bookings = " + reserva.toString()+ "\n";
+        imprime +="WAGON " + wagons.toString() + ". Occupied: " + ocupados + " Available: " + (this.cupos) + "\n" + "Bookings = " + reserva.toString()+ "\n";
         }
         return imprime;
     }
