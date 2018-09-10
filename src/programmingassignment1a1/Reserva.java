@@ -6,6 +6,7 @@
 package programmingassignment1a1;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -62,10 +63,10 @@ public class Reserva {
 
     @Override
     public String toString() {
-        String i = "";
-        for (Cliente c : this.cliente) {
-            i += c.toString();
-        }
+        String i = id;
+//        for (Cliente c : this.cliente) {
+//            i += id+ " ";
+//        }
         return i;
     }
 

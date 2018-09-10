@@ -6,6 +6,7 @@
 package programmingassignment1a1;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -76,8 +77,8 @@ public class Recorridos {
 
     @Override
     public String toString() {
-        String imprime = "Ride Status" + "\n"+ fecha+ "\n"+ "WAGON ";
-        imprime += wagons.size() + ". Occupied: " + ocupados + " Available: " + ( this.cupos - ocupados) + reserva.toString();
+        String imprime = "Ride Status" + "\n" + fecha + "\n" + "WAGON ";
+        imprime += wagons.size() + ". Occupied: " + ocupados + " Available: " + (this.cupos - ocupados) + "\n" + "Bookings = " + reserva.toString();
         return imprime;
     }
 

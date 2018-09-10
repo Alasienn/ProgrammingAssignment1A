@@ -16,7 +16,7 @@ public class Vagon {
     private int cupos;
     private ArrayList<Reserva> reserva;
 
-    public Vagon(int num, int cupos) {
+    public Vagon(int cupos) {
         this.num = num;
         this.cupos = cupos;
         this.reserva = new ArrayList<>();

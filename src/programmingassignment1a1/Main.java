@@ -18,14 +18,18 @@ public class Main {
      */
     public static void main(String[] args) {
         Cliente cli = new Cliente(12345, "Pepe");
-        Reserva pru = new Reserva("1A", null);
-        pru.newCliente(12345, "Pepito2");
+        Cliente cli2 = new Cliente(12346, "Pepito2");
+        Reserva pru = new Reserva("A1", null);
+        Reserva pru2 = new Reserva("A2", null);
+        //pru.newCliente(12345, "Pepito2");
         pru.newCliente2(cli);
+        pru.newCliente2(cli2);
 
-        Vagon prueba = new Vagon(5, 10);
+        Vagon prueba = new Vagon(10);
         
         Recorridos rec = new Recorridos("hoy", null, null);
         rec.nuevaReserva(pru);
+        rec.nuevaReserva(pru2);
         rec.nuevoVagon(prueba);
         pru.setTamano();
         rec.setCupos(prueba.getCupos());

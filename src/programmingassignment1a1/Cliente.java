@@ -5,6 +5,8 @@
  */
 package programmingassignment1a1;
 
+import java.util.Iterator;
+
 /**
  *
  * @author Andres
@@ -36,7 +38,8 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "["+nombre+"]";
+        String aux= nombre;
+        return aux;
     }
     
     
