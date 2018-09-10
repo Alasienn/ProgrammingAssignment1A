@@ -77,8 +77,11 @@ public class Recorridos {
 
     @Override
     public String toString() {
-        String imprime = "Ride Status" + "\n" + fecha + "\n" + "WAGON ";
-        imprime += wagons.size() + ". Occupied: " + ocupados + " Available: " + (this.cupos - ocupados) + "\n" + "Bookings = " + reserva.toString();
+        String imprime ="";
+        imprime += "Ride Status" + "\n" + "DATE: " + fecha + "\n";
+        for (Vagon r : this.wagons) {
+        imprime +="WAGON " + wagons.toString() + ". Occupied: " + ocupados + " Available: " + (this.cupos - ocupados) + "\n" + "Bookings = " + reserva.toString()+ "\n";
+        }
         return imprime;
     }
 
