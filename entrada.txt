@@ -1,0 +1,13 @@
+4 10
+25/3/2014
+A1, Juan Perez, 11757545, Pedro Perez, 124352345, Mario Perez, 135756746, Jorge Perez, 14465675
+A2, Ana Gil, 217685656, Liz Gil, 22786446, Luz Gil, 234337898, Sol Gil, 2423346788, Ruth Gil, 24878557
+A3, Laura Rojas, 314696554, David Rojas, 33568992
+%%
+3 10
+28/4/2014
+B1, Juan Perez, 11757545, Pedro Perez, 124352345, Mario Perez, 135756746, Jorge Perez, 14465675, Julia Perez, 3545756778
+B2, Alberto Ruiz, 8734895623, Eduard Ruiz, 345867654, Antonia Ruiz, 3456934593
+B3, Ana Gil, 2176856, Liz Gil, 22786446, Luz Gil, 234337898, Sol Gil, 2423346788, Ruth Gil, 24878557, Dora Gil, 7568999, Lina Gil, 23328522
+B4, Laura Rojas, 314696554, David Rojas, 33568992, Camila Rojas, 434534, Maria Rojas, 884754, Alvaro Rojas, 76890
+B5, Flor Zea, 2354345, Ana Zea, 5345634, Victor Zea, 34414, Rosa Zea, 2344, Ruth Zea, 35343, Nora Zea, 788676
